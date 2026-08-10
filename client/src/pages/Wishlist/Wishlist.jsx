@@ -105,7 +105,7 @@ const Wishlist = () => {
 
                 const response = await axios.get(
 
-                    "http://localhost:5000/api/wishlist",
+                    "https://campus-marketplace-14dq.onrender.com/api/wishlist",
 
                     {
 
@@ -207,7 +207,7 @@ const Wishlist = () => {
 
             await axios.delete(
 
-                `http://localhost:5000/api/wishlist/${productId}`,
+                `https://campus-marketplace-14dq.onrender.com/api/wishlist/${productId}`,
 
                 {
 
@@ -609,3 +609,4 @@ const Wishlist = () => {
 
 
 export default Wishlist;
+

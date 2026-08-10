@@ -64,7 +64,7 @@ const LostFound = () => {
     try {
 
       const response = await axios.get(
-        "http://localhost:5000/api/lost-found"
+        "https://campus-marketplace-14dq.onrender.com/api/lost-found"
       );
 
       setItems(response.data);
@@ -192,7 +192,7 @@ const LostFound = () => {
       if (editIndex === null) {
 
         const response = await axios.post(
-          "http://localhost:5000/api/lost-found",
+          "https://campus-marketplace-14dq.onrender.com/api/lost-found",
           newItem
         );
 
@@ -215,7 +215,7 @@ const LostFound = () => {
         const itemId = items[editIndex]._id;
 
         const response = await axios.put(
-          `http://localhost:5000/api/lost-found/${itemId}`,
+          `https://campus-marketplace-14dq.onrender.com/api/lost-found/${itemId}`,
           newItem
         );
 
@@ -328,7 +328,7 @@ const LostFound = () => {
     try {
 
       await axios.delete(
-        `http://localhost:5000/api/lost-found/${item._id}`
+        `https://campus-marketplace-14dq.onrender.com/api/lost-found/${item._id}`
       );
 
       setItems((prevItems) =>
@@ -376,7 +376,7 @@ const LostFound = () => {
     try {
 
       const response = await axios.patch(
-        `http://localhost:5000/api/lost-found/${item._id}/found`
+        `https://campus-marketplace-14dq.onrender.com/api/lost-found/${item._id}/found`
       );
 
       setItems((prevItems) => {
@@ -956,4 +956,5 @@ const LostFound = () => {
 };
 
 export default LostFound;
+
 

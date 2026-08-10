@@ -90,7 +90,7 @@ const Chat = () => {
 
                 const response = await axios.get(
 
-                    `http://localhost:5000/api/products/${productId}`
+                    `https://campus-marketplace-14dq.onrender.com/api/products/${productId}`
 
                 );
 
@@ -147,7 +147,7 @@ const Chat = () => {
 
                 const response = await axios.get(
 
-                    "http://localhost:5000/api/chat/my-chats",
+                    "https://campus-marketplace-14dq.onrender.com/api/chat/my-chats",
 
                     {
                         headers: {
@@ -253,7 +253,7 @@ const Chat = () => {
 
                 const response = await axios.get(
 
-                    `http://localhost:5000/api/chat/${userId}/${product._id}`,
+                    `https://campus-marketplace-14dq.onrender.com/api/chat/${userId}/${product._id}`,
 
                     {
                         headers: {
@@ -334,7 +334,7 @@ const Chat = () => {
 
             const response = await axios.get(
 
-                `http://localhost:5000/api/products/${chat.product._id}`
+                `https://campus-marketplace-14dq.onrender.com/api/products/${chat.product._id}`
 
             );
 
@@ -503,7 +503,7 @@ const Chat = () => {
 
             const response = await axios.post(
 
-                "http://localhost:5000/api/chat/send",
+                "https://campus-marketplace-14dq.onrender.com/api/chat/send",
 
                 newMessage,
 
@@ -547,7 +547,7 @@ const Chat = () => {
             const chatsResponse =
                 await axios.get(
 
-                    "http://localhost:5000/api/chat/my-chats",
+                    "https://campus-marketplace-14dq.onrender.com/api/chat/my-chats",
 
                     {
                         headers: {
@@ -617,7 +617,7 @@ const Chat = () => {
 
             await axios.delete(
 
-                `http://localhost:5000/api/chat/${product._id}`,
+                `https://campus-marketplace-14dq.onrender.com/api/chat/${product._id}`,
 
                 {
                     headers: {
@@ -1283,4 +1283,5 @@ const Chat = () => {
 
 
 export default Chat;
+
 

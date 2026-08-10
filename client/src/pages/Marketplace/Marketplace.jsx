@@ -43,7 +43,7 @@ const Marketplace = () => {
             try {
 
                 const res = await axios.get(
-                    "http://localhost:5000/api/products"
+                    "https://campus-marketplace-14dq.onrender.com/api/products"
                 );
 
                 console.log(
@@ -110,7 +110,7 @@ const Marketplace = () => {
 
                 const response = await axios.get(
 
-                    "http://localhost:5000/api/wishlist",
+                    "https://campus-marketplace-14dq.onrender.com/api/wishlist",
 
                     {
 
@@ -242,7 +242,7 @@ const Marketplace = () => {
 
                 await axios.delete(
 
-                    `http://localhost:5000/api/wishlist/${productId}`,
+                    `https://campus-marketplace-14dq.onrender.com/api/wishlist/${productId}`,
 
                     {
 
@@ -286,7 +286,7 @@ const Marketplace = () => {
                 const response =
                     await axios.post(
 
-                        "http://localhost:5000/api/wishlist",
+                        "https://campus-marketplace-14dq.onrender.com/api/wishlist",
 
                         {
 
@@ -748,4 +748,5 @@ const Marketplace = () => {
 
 
 export default Marketplace;
+
 

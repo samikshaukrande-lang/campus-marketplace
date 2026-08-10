@@ -18,7 +18,7 @@ import {
 import axios from "axios";
 
 
-const API_URL = "http://localhost:5000/api/campus-deals";
+const API_URL = "https://campus-marketplace-14dq.onrender.com/api/campus-deals";
 
 
 const CampusDeals = () => {
@@ -1176,4 +1176,5 @@ const CampusDeals = () => {
 
 
 export default CampusDeals;
+
 

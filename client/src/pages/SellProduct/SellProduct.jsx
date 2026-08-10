@@ -140,7 +140,7 @@ contactNumber:contactNumber
 const response = await axios.post(
 
 
-"http://localhost:5000/api/products",
+"https://campus-marketplace-14dq.onrender.com/api/products",
 
 
 productData,

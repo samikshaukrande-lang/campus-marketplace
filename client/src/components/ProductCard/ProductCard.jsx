@@ -41,7 +41,7 @@ const ProductCard = ({ product }) => {
                 }
 
                 const response = await axios.get(
-                    "http://localhost:5000/api/wishlist",
+                    "https://campus-marketplace-14dq.onrender.com/api/wishlist",
                     {
                         headers: {
                             Authorization:
@@ -103,7 +103,7 @@ const ProductCard = ({ product }) => {
 
                 await axios.delete(
 
-                    `http://localhost:5000/api/wishlist/${productId}`,
+                    `https://campus-marketplace-14dq.onrender.com/api/wishlist/${productId}`,
 
                     {
                         headers: {
@@ -122,7 +122,7 @@ const ProductCard = ({ product }) => {
 
             const response = await axios.post(
 
-                "http://localhost:5000/api/wishlist",
+                "https://campus-marketplace-14dq.onrender.com/api/wishlist",
 
                 {
                     productId: productId
@@ -272,4 +272,5 @@ const ProductCard = ({ product }) => {
 
 
 export default ProductCard;
+
 

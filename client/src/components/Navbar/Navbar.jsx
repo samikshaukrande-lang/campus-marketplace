@@ -43,7 +43,7 @@ const token = localStorage.getItem("token");
 
 const response = await axios.get(
 
-"http://localhost:5000/api/users/profile",
+"https://campus-marketplace-14dq.onrender.com/api/users/profile",
 
 {
 

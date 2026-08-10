@@ -24,7 +24,7 @@ const Register = () => {
     try {
 
       const response = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://campus-marketplace-14dq.onrender.com/api/auth/register",
         {
           name,
           email,

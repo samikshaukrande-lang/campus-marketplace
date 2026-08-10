@@ -71,7 +71,7 @@ const MyListings = () => {
 
                 const res = await axios.get(
 
-                    "http://localhost:5000/api/products"
+                    "https://campus-marketplace-14dq.onrender.com/api/products"
 
                 );
 
@@ -175,7 +175,7 @@ const MyListings = () => {
 
             await axios.delete(
 
-                `http://localhost:5000/api/products/${id}`
+                `https://campus-marketplace-14dq.onrender.com/api/products/${id}`
 
             );
 
@@ -268,7 +268,7 @@ const MyListings = () => {
 
             const res = await axios.put(
 
-                `http://localhost:5000/api/products/${id}`,
+                `https://campus-marketplace-14dq.onrender.com/api/products/${id}`,
 
                 editData
 
@@ -751,4 +751,5 @@ const MyListings = () => {
 };
 
 export default MyListings;
+
 

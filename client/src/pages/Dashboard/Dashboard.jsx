@@ -122,7 +122,7 @@ const Dashboard = () => {
                     const response =
                         await axios.get(
 
-                            "http://localhost:5000/api/dashboard",
+                            "https://campus-marketplace-14dq.onrender.com/api/dashboard",
 
                             {
 
@@ -654,4 +654,5 @@ const Dashboard = () => {
 
 
 export default Dashboard;
+
 

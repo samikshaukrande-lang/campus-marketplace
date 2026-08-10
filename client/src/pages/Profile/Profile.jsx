@@ -41,7 +41,7 @@ const Profile = () => {
 
 
             const response = await axios.get(
-                "http://localhost:5000/api/users/profile",
+                "https://campus-marketplace-14dq.onrender.com/api/users/profile",
                 {
                     headers:{
                         Authorization:`Bearer ${token}`
@@ -139,7 +139,7 @@ const Profile = () => {
 
             const response = await axios.put(
 
-                "http://localhost:5000/api/users/profile/update",
+                "https://campus-marketplace-14dq.onrender.com/api/users/profile/update",
 
                 {
                     name,
