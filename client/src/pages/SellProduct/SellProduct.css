@@ -1,0 +1,311 @@
+.sell-page{
+
+
+margin-left:250px;
+
+padding:30px;
+
+background:#F8FAFF;
+
+min-height:100vh;
+
+
+}
+
+
+
+
+
+
+.sell-card{
+
+
+width:700px;
+
+background:#FFFFFF;
+
+padding:35px;
+
+border-radius:25px;
+
+margin:auto;
+
+
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+
+
+.sell-card h1{
+
+
+color:#111827;
+
+font-size:32px;
+
+margin-bottom:5px;
+
+
+}
+
+
+
+
+.sell-card p{
+
+
+color:#6B7280;
+
+margin-bottom:25px;
+
+
+}
+
+
+
+
+
+
+form{
+
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+
+}
+
+
+
+
+label{
+
+
+font-weight:600;
+
+color:#111827;
+
+
+}
+
+
+
+
+
+
+
+input,
+select,
+textarea{
+
+
+padding:14px;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+outline:none;
+
+font-size:15px;
+
+
+}
+
+
+
+input:focus,
+select:focus,
+textarea:focus{
+
+
+border-color:#5B4BFF;
+
+
+}
+
+
+
+
+
+
+
+/* Upload Box */
+
+
+.upload-box{
+
+
+height:170px;
+
+border:2px dashed #5B4BFF;
+
+border-radius:15px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+position:relative;
+
+background:#ECEBFF;
+
+color:#5B4BFF;
+
+
+}
+
+
+
+.upload-box svg{
+
+
+font-size:40px;
+
+
+}
+
+
+
+.upload-box input{
+
+
+position:absolute;
+
+height:100%;
+
+width:100%;
+
+opacity:0;
+
+cursor:pointer;
+
+
+}
+
+
+
+
+
+
+
+.submit-btn{
+
+
+margin-top:20px;
+
+padding:15px;
+
+background:#5B4BFF;
+
+color:white;
+
+border:none;
+
+border-radius:12px;
+
+font-size:17px;
+
+cursor:pointer;
+
+
+}
+
+
+
+.submit-btn:hover{
+
+
+background:#061B3A;
+
+
+}
+
+
+
+
+
+
+
+
+@media(max-width:900px){
+
+
+.sell-card{
+
+width:100%;
+
+}
+
+
+
+}
+/* =========================================
+   SELL PRODUCT - MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .sell-page {
+        margin-left: 0;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .sell-card {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 18px;
+    }
+
+    .sell-card h1 {
+        font-size: 25px;
+        line-height: 1.3;
+    }
+
+    .sell-card p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 13px;
+        font-size: 14px;
+    }
+
+    .upload-box {
+        height: 150px;
+    }
+
+    .upload-box svg {
+        font-size: 34px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+}

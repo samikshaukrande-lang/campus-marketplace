@@ -1,0 +1,822 @@
+.deal-page{
+
+    margin-left:250px;
+    padding:25px;
+    background:#F8FAFF;
+    min-height:100vh;
+
+}
+
+
+
+/* Header */
+
+.deal-header{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+    margin-bottom:25px;
+
+}
+
+
+
+.deal-header h1{
+
+    margin:0;
+
+    font-size:30px;
+
+    color:#111827;
+
+}
+
+
+
+.deal-header p{
+
+    color:#6B7280;
+
+    margin:10px 0 20px;
+
+}
+
+
+
+
+
+.deal-header button{
+
+
+    background:#5B4BFF;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+
+}
+
+
+
+.deal-header button:hover{
+
+    background:#4938ff;
+
+}
+
+
+
+
+
+
+
+/* Form */
+
+
+.deal-form{
+
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+.deal-form h2{
+
+    color:#111827;
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+
+.deal-form input,
+.deal-form select{
+
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:14px;
+
+
+}
+
+
+
+
+.deal-form label{
+
+    color:#374151;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+
+
+
+
+
+.submit-btn{
+
+
+    background:#5B4BFF;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+
+
+/* Deal Cards */
+
+
+.deal-grid{
+
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+
+
+.deal-card{
+
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 18px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+
+
+}
+
+
+
+.deal-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+
+.deal-icon{
+
+
+    width:45px;
+
+    height:45px;
+
+    background:#ECEBFF;
+
+    color:#5B4BFF;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+
+.deal-card h2{
+
+
+    color:#111827;
+
+    font-size:20px;
+
+    margin-bottom:12px;
+
+
+}
+
+
+
+
+
+.deal-card h3{
+
+
+    color:#10B981;
+
+    font-size:24px;
+
+    margin:15px 0;
+
+
+}
+
+
+
+
+
+.old-price{
+
+
+    color:#777;
+
+    text-decoration:line-through;
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+.deal-card span{
+
+
+    display:inline-block;
+
+    background:#FFE4E6;
+
+    color:#EF4444;
+
+    padding:7px 15px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    margin:10px 0;
+
+
+}
+
+
+
+
+.deal-card p{
+
+
+    color:#555;
+
+    font-size:14px;
+
+}
+
+
+
+
+
+
+
+
+@media(max-width:1000px){
+
+
+.deal-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:700px){
+
+
+.deal-page{
+
+    margin-left:0;
+
+}
+
+
+
+.deal-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+}
+
+
+
+/* Search Section */
+
+.deal-search{
+
+display:flex;
+gap:20px;
+margin:25px 0;
+
+}
+
+
+.deal-search input,
+.deal-search select{
+
+padding:12px 15px;
+border-radius:10px;
+border:1px solid #ddd;
+font-size:15px;
+
+}
+
+
+
+
+
+/* Deal Card */
+
+.deal-card{
+
+position:relative;
+background:white;
+border-radius:20px;
+padding:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+
+}
+
+
+
+.deal-card:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+
+
+
+
+/* Deal Image */
+
+.deal-image{
+
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:15px;
+margin-bottom:15px;
+
+}
+
+
+
+
+
+
+/* Edit Delete Buttons */
+
+
+.deal-actions{
+
+position:absolute;
+top:15px;
+right:15px;
+display:flex;
+gap:10px;
+
+}
+
+
+
+.deal-actions button{
+
+width:35px;
+height:35px;
+
+border:none;
+
+border-radius:50%;
+
+background:#ECEBFF;
+
+color:#5B4BFF;
+
+cursor:pointer;
+
+font-size:15px;
+
+}
+
+
+
+.deal-actions button:hover{
+
+background:#5B4BFF;
+
+color:white;
+
+}
+
+
+
+
+
+
+/* Wishlist Button */
+
+
+.wishlist{
+
+position:absolute;
+top:15px;
+left:15px;
+
+border:none;
+
+background:#fff;
+
+width:35px;
+height:35px;
+
+border-radius:50%;
+
+color:#ff4d6d;
+
+cursor:pointer;
+
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+
+}
+
+
+
+
+
+
+/* Discount */
+
+.discount{
+
+display:inline-block;
+
+background:#10B981;
+
+color:white;
+
+padding:6px 12px;
+
+border-radius:20px;
+
+font-size:14px;
+
+}
+
+
+
+
+
+
+/* Coupon */
+
+
+.coupon{
+
+margin-top:15px;
+
+background:#F8FAFF;
+
+padding:10px;
+
+border-radius:10px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+
+
+
+.coupon button{
+
+border:none;
+
+background:#5B4BFF;
+
+color:white;
+
+padding:7px 10px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+
+
+
+
+/* Form */
+
+.deal-form{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+margin-bottom:30px;
+
+}
+
+
+
+.deal-form input,
+.deal-form select{
+
+width:100%;
+
+padding:12px;
+
+margin-bottom:15px;
+
+border-radius:10px;
+
+border:1px solid #ddd;
+
+}
+
+
+
+
+.submit-btn{
+
+background:#5B4BFF;
+
+color:white;
+
+border:none;
+
+padding:12px 25px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+font-size:16px;
+
+}
+
+
+
+.submit-btn:hover{
+
+background:#4338CA;
+
+}
+
+
+
+
+
+/* Mobile Responsive */
+
+
+@media(max-width:768px){
+
+
+.deal-search{
+
+flex-direction:column;
+
+}
+
+
+.deal-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+}
+/* =========================================
+   CAMPUS DEALS - MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .deal-page {
+        margin-left: 0;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .deal-header {
+        padding: 20px;
+        border-radius: 16px;
+        margin-bottom: 18px;
+    }
+
+    .deal-header h1 {
+        font-size: 25px;
+        line-height: 1.3;
+    }
+
+    .deal-header p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .deal-header button {
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .deal-search {
+        flex-direction: column;
+        gap: 10px;
+        margin: 18px 0;
+    }
+
+    .deal-search input,
+    .deal-search select {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px;
+    }
+
+    .deal-form {
+        padding: 18px;
+        border-radius: 16px;
+        box-sizing: border-box;
+    }
+
+    .deal-form h2 {
+        font-size: 20px;
+    }
+
+    .deal-form input,
+    .deal-form select {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 13px;
+    }
+
+    .deal-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .deal-card {
+        padding: 16px;
+        border-radius: 17px;
+    }
+
+    .deal-image {
+        height: 180px;
+        border-radius: 13px;
+    }
+
+    .deal-card h2 {
+        font-size: 18px;
+    }
+
+    .deal-card h3 {
+        font-size: 21px;
+    }
+
+    .deal-card p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .deal-actions {
+        top: 12px;
+        right: 12px;
+        gap: 7px;
+    }
+
+    .deal-actions button {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .wishlist {
+        top: 12px;
+        left: 12px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .coupon {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .coupon button {
+        padding: 7px 10px;
+    }
+
+}
