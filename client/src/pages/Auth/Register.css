@@ -179,3 +179,95 @@ cursor:pointer;
 
 
 }
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+  .register-container {
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .register-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 28px 22px;
+    border-radius: 20px;
+  }
+
+  .logo {
+    font-size: 27px;
+  }
+
+  .register-card h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+  }
+
+  .register-card p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .register-card input {
+    width: 100%;
+    padding: 13px;
+    margin: 8px 0;
+    font-size: 14px;
+  }
+
+  .register-btn {
+    padding: 13px;
+    font-size: 15px;
+  }
+
+  .or {
+    margin: 18px;
+    font-size: 14px;
+  }
+
+  .social-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+  .register-container {
+    padding: 12px;
+  }
+
+  .register-card {
+    padding: 22px 16px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .register-card h2 {
+    font-size: 23px;
+  }
+
+  .register-card p {
+    font-size: 13px;
+  }
+
+  .register-card input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .register-btn {
+    padding: 12px;
+  }
+
+  .social-btn {
+    padding: 11px;
+  }
+}

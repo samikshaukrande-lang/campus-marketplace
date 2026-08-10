@@ -293,3 +293,119 @@ cursor:pointer;
 
 
 }
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+  .auth-container {
+    min-height: 100vh;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .auth-left {
+    width: 100%;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .brand {
+    font-size: 26px;
+  }
+
+  .auth-left h1 {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .auth-left p {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 auto;
+  }
+
+  .illustration {
+    margin-top: 15px;
+    font-size: 55px;
+  }
+
+  .auth-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 25px 20px;
+    border-radius: 20px;
+  }
+
+  .auth-card h2 {
+    font-size: 25px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .auth-card input {
+    padding: 13px;
+    font-size: 14px;
+  }
+
+  .main-btn {
+    padding: 13px;
+    font-size: 15px;
+  }
+
+  .divider {
+    margin: 20px 0;
+  }
+
+  .social {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .bottom-text {
+    font-size: 14px;
+  }
+}
+
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+  .auth-container {
+    padding: 12px;
+  }
+
+  .auth-left {
+    padding: 15px 5px;
+  }
+
+  .brand {
+    font-size: 23px;
+  }
+
+  .auth-left h1 {
+    font-size: 25px;
+  }
+
+  .auth-left p {
+    font-size: 14px;
+  }
+
+  .illustration {
+    font-size: 45px;
+    margin-top: 10px;
+  }
+
+  .auth-card {
+    padding: 22px 16px;
+  }
+
+  .auth-card h2 {
+    font-size: 23px;
+  }
+}
