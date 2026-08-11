@@ -1,7 +1,12 @@
+
 import User from "../models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import { OAuth2Client } from "google-auth-library";
 
+const googleClient = new OAuth2Client(
+    "930909343892-7uiks646kiv9v1jjnd55g92685s6ud36.apps.googleusercontent.com"
+);
 
 // ================= REGISTER USER =================
 
@@ -82,7 +87,6 @@ export const registerUser = async (req, res) => {
 };
 
 
-
 // ================= LOGIN USER =================
 
 export const loginUser = async (req, res) => {
@@ -94,7 +98,6 @@ export const loginUser = async (req, res) => {
             password
         } = req.body;
 
-
         if (!email || !password) {
 
             return res.status(400).json({
@@ -103,11 +106,9 @@ export const loginUser = async (req, res) => {
 
         }
 
-
         const user = await User.findOne({
             email
         });
-
 
         if (!user) {
 
@@ -117,15 +118,10 @@ export const loginUser = async (req, res) => {
 
         }
 
-
         const isMatch = await bcrypt.compare(
-
             password,
-
             user.password
-
         );
-
 
         if (!isMatch) {
 
@@ -134,7 +130,6 @@ export const loginUser = async (req, res) => {
             });
 
         }
-
 
         const token = jwt.sign(
 
@@ -151,7 +146,6 @@ export const loginUser = async (req, res) => {
             }
 
         );
-
 
         res.status(200).json({
 
@@ -171,7 +165,6 @@ export const loginUser = async (req, res) => {
 
         });
 
-
     } catch (error) {
 
         console.log(error);
@@ -183,3 +176,131 @@ export const loginUser = async (req, res) => {
     }
 
 };
+
+
+// ================= GOOGLE LOGIN =================
+
+export const googleLogin = async (req, res) => {
+
+    try {
+
+        const { credential } = req.body;
+
+        if (!credential) {
+
+            return res.status(400).json({
+                message: "Google credential is required"
+            });
+
+        }
+
+        const ticket = await googleClient.verifyIdToken({
+
+            idToken: credential,
+
+            audience:
+                "930909343892-7uiks646kiv9v1jjnd55g92685s6ud36.apps.googleusercontent.com"
+
+        });
+
+        const payload = ticket.getPayload();
+
+        const {
+            name,
+            email,
+            picture
+        } = payload;
+
+        if (!email) {
+
+            return res.status(400).json({
+                message: "Google account email not found"
+            });
+
+        }
+
+        let user = await User.findOne({
+            email
+        });
+
+        // Create new user if not found
+
+        if (!user) {
+
+            user = await User.create({
+
+                name: name || "Google User",
+
+                email,
+
+                college: "Not Provided",
+
+                password:
+                    "google-" +
+                    Math.random()
+                        .toString(36)
+                        .slice(2) +
+                    Date.now(),
+
+                profileImage: picture || "",
+
+                role: "student"
+
+            });
+
+        }
+
+        // Create JWT Token
+
+        const token = jwt.sign(
+
+            {
+                id: user._id,
+                email: user.email,
+                role: user.role
+            },
+
+            process.env.JWT_SECRET,
+
+            {
+                expiresIn: "7d"
+            }
+
+        );
+
+        res.status(200).json({
+
+            message: "Google Login Successful",
+
+            token,
+
+            user: {
+
+                id: user._id,
+                name: user.name,
+                email: user.email,
+                college: user.college,
+                role: user.role,
+                profileImage: user.profileImage
+
+            }
+
+        });
+
+    } catch (error) {
+
+        console.log(
+            "Google Login Error:",
+            error
+        );
+
+        res.status(500).json({
+
+            message: "Google Login Failed"
+
+        });
+
+    }
+
+};
+
